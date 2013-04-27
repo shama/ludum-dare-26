@@ -33,7 +33,8 @@
     "voxel-fly": "~0.1.0",
     "voxel-player": "~0.1.0",
     "tic": "~0.2.0",
-    "lodash": "~1.2.0"
+    "lodash": "~1.2.0",
+    "voxel-highlight": "0.0.9"
   },
   "devDependencies": {
     "browservefy": "0.0.10"

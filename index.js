@@ -24,10 +24,14 @@ game.friction = 0.1;
 
 game.addStats();
 
+// hide title screen on click
 var title = document.getElementById('title');
 title.addEventListener('click', function() {
   title.classList.add('done');
 });
+
+// highlight voxels
+require('voxel-highlight')(game, {color: 0xdddddd, animate: true, wireframeOpacity: 0.2});
 
 // add materials
 //require('./lib/materials')(game);
@@ -57,7 +61,7 @@ markerCount.innerHTML = 'x' + markers.max;
 // explode voxel on click
 var explode = require('voxel-debris')(game, { power : 1.5 });
 game.on('fire', _.debounce(function(pos) {
-  var pos = game.raycast(game.cameraPosition(), game.cameraVector(), 100).voxel;
+  var pos = game.raycast(game.cameraPosition(), game.cameraVector(), 10).voxel;
   markerCount.innerHTML = 'x' + markers.place(pos);
   //if (erase) explode(pos);
   //else game.createBlock(pos, 1);
