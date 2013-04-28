@@ -35,7 +35,9 @@
     "tic": "~0.2.0",
     "lodash": "~1.2.0",
     "voxel-highlight": "0.0.9",
-    "pathfinding": "~0.4.1"
+    "pathfinding": "~0.4.1",
+    "voxel-audio": "0.0.4",
+    "voxel-pp": "0.0.4"
   },
   "devDependencies": {
     "browservefy": "0.0.10"
