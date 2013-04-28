@@ -37,6 +37,9 @@ game.composer.use(require('./shaders/rgbshift'));
 // give a copy for easier access
 game.tic = tic;
 
+// easy access to audio
+game.audio = document.getElementById('audio');
+
 //game.addStats();
 
 // keep track of reds
@@ -45,6 +48,8 @@ var reds = [];
 // hide title screen on click
 var title = document.getElementById('title');
 title.addEventListener('click', function() {
+  game.audio.volume = 0.5;
+  game.audio.play();
   title.innerHTML = 'mal';
   title.classList.add('done');
 });
